@@ -13,15 +13,15 @@ Manage your dotfiles across multiple machines, securely.
 
 ## Documentation
 
-* [Install guide](docs/INSTALL.md) to get chezmoi installed on your machine with
-  one or two commands.
-* [Quick start guide](docs/QUICKSTART.md) for your first steps.
-* [How-to guide](docs/HOWTO.md) for achieving specific tasks.
-* [FAQ](docs/FAQ.md) for questions that aren't answered elsewhere.
-* [Changes](docs/CHANGES.md) for non-backwards compatible changes.
-* [Reference](docs/REFERENCE.md) for a complete description of chezmoi.
-* [Contributing](docs/CONTRIBUTING.md) for people looking to contribute to or
-  package chezmoi.
+* [Install guide](assets/docs/INSTALL.md) to get chezmoi installed on your
+  machine with one or two commands.
+* [Quick start guide](assets/docs/QUICKSTART.md) for your first steps.
+* [How-to guide](assets/docs/HOWTO.md) for achieving specific tasks.
+* [FAQ](assets/docs/FAQ.md) for questions that aren't answered elsewhere.
+* [Changes](assets/docs/CHANGES.md) for non-backwards compatible changes.
+* [Reference](assets/docs/REFERENCE.md) for a complete description of chezmoi.
+* [Contributing](assets/docs/CONTRIBUTING.md) for people looking to contribute
+  to or package chezmoi.
 
 ## What does chezmoi do and why should I use it?
 
@@ -121,12 +121,12 @@ don't need chezmoi. Otherwise, read on...
 
 ## How do I start with chezmoi?
 
-[Install chezmoi](docs/INSTALL.md) then read the [quick start
-guide](docs/QUICKSTART.md). The [how-to guide](docs/HOWTO.md) covers most common
-tasks, and there's the [frequently asked questions](docs/FAQ.md) for specific
-questions. For a full description of chezmoi, consult the
-[reference](docs/REFERENCE.md). If all else fails, [open an
-issue](https://github.com/twpayne/chezmoi/issues/new).
+[Install chezmoi](assets/docs/INSTALL.md) then read the [quick start
+guide](assets/docs/QUICKSTART.md). The [how-to guide](assets/docs/HOWTO.md)
+covers most common tasks, and there's the [frequently asked
+questions](assets/docs/FAQ.md) for specific questions. For a full description of
+chezmoi, consult the [reference](assets/docs/REFERENCE.md). If all else fails,
+[open an issue](https://github.com/twpayne/chezmoi/issues/new).
 
 ## License
 

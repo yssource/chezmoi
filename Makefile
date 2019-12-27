@@ -31,14 +31,13 @@ format:
 .PHONY: generate
 generate:
 	go generate ./...
-	$$(go env GOPATH)/bin/packr2
 
 .PHONY: install-tools
 install-tools:
 	curl -sfL https://install.goreleaser.com/github.com/golangci/golangci-lint.sh | sh -s -- v1.21.0
-	GO111MODULE=off go get -u \
-		github.com/gobuffalo/packr/v2/packr2 \
-		mvdan.cc/gofumpt/gofumports
+	( cd $$(mktemp -d) && go mod init tmp && go get -u \
+		github.com/rakyll/statik \
+		mvdan.cc/gofumpt/gofumports )
 
 .PHONY: lint
 lint:

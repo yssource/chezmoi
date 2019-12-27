@@ -104,7 +104,7 @@ to the source state.
 
 This is correct. Certain target filenames, for example `~/dot_example`, are
 incompatible with chezmoi's
-[attributes](https://github.com/twpayne/chezmoi/blob/master/docs/REFERENCE.md#source-state-attributes)
+[attributes](https://github.com/twpayne/chezmoi/blob/master/assets/docs/REFERENCE.md#source-state-attributes)
 used in the source state.
 
 This is a deliberate, practical compromise. Target state metadata (private,

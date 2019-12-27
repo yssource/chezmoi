@@ -39,11 +39,11 @@ Run chezmoi:
 
 ## Documentation changes
 
-The canonical documentation for chezmoi is in the `docs` directory. The help
-text (the output of `chezmoi command --help`) and the website
+The canonical documentation for chezmoi is in the `assets/docs` directory. The
+help text (the output of `chezmoi command --help`) and the website
 (https://chezmoi.io/) are generated from this.
 
-If you update `docs/REFERENCE.md` you must also run
+If you update `assets/docs/REFERENCE.md` you must also run
 
     go generate ./...
 
@@ -71,7 +71,8 @@ that:
   intended.
 
 * The documentation is updated, if necessary. For new features you should add an
-  entry in `docs/HOWTO.md` and a complete description in `docs/REFERENCE.md`.
+  entry in `assets/docs/HOWTO.md` and a complete description in
+  `assets/docs/REFERENCE.md`.
 
 * The code is correctly formatted, according to
   [gofumports](https://mvdan.cc/gofumpt/gofumports). You can ensure this by

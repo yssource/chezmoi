@@ -7,13 +7,14 @@ import (
 	"text/template"
 
 	"github.com/Masterminds/sprig"
+	"github.com/rakyll/statik/fs"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	xdg "github.com/twpayne/go-xdg/v3"
 )
 
 func TestAutoCommitCommitMessage(t *testing.T) {
-	commitMessageText, err := templatesBox.Find("COMMIT_MESSAGE.tmpl")
+	commitMessageText, err := fs.ReadFile(statikFS, "/templates/COMMIT_MESSAGE.tmpl")
 	require.NoError(t, err)
 	commitMessageTmpl, err := template.New("commit_message").Funcs(sprig.HermeticTxtFuncMap()).Parse(string(commitMessageText))
 	require.NoError(t, err)

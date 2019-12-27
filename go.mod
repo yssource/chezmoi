@@ -8,9 +8,6 @@ require (
 	github.com/Masterminds/semver v1.5.0 // indirect
 	github.com/Masterminds/sprig v2.22.0+incompatible
 	github.com/coreos/go-semver v0.3.0
-	github.com/gobuffalo/envy v1.8.1 // indirect
-	github.com/gobuffalo/logger v1.0.3 // indirect
-	github.com/gobuffalo/packr/v2 v2.7.1
 	github.com/golang/protobuf v1.3.2 // indirect
 	github.com/google/go-github/v26 v26.1.3
 	github.com/google/renameio v0.1.0
@@ -24,7 +21,7 @@ require (
 	github.com/mitchellh/reflectwalk v1.0.1 // indirect
 	github.com/pelletier/go-toml v1.6.0 // indirect
 	github.com/pkg/diff v0.0.0-20190930165518-531926345625
-	github.com/rogpeppe/go-internal v1.5.0 // indirect
+	github.com/rakyll/statik v0.1.6
 	github.com/russross/blackfriday/v2 v2.0.1
 	github.com/spf13/afero v1.2.2 // indirect
 	github.com/spf13/cobra v0.0.5

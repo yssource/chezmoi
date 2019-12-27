@@ -18,7 +18,7 @@ git clone --branch=gh-pages --local .. ${tmpdir}
 
 # copy the new website to the temporary directory
 rm -rf ${tmpdir}/*
-cp -r public/* ${tmpdir}
+cp -r assets/* ${tmpdir}
 
 # prepare the clone
 cd ${tmpdir}

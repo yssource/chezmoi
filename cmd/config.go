@@ -1,5 +1,7 @@
 package cmd
 
+//go:generate statik -src=../assets
+
 import (
 	"bufio"
 	"bytes"
@@ -7,6 +9,7 @@ import (
 	"errors"
 	"fmt"
 	"io"
+	"net/http"
 	"os"
 	"os/exec"
 	"os/user"
@@ -17,9 +20,10 @@ import (
 	"unicode"
 
 	"github.com/BurntSushi/toml"
-	packr "github.com/gobuffalo/packr/v2"
+	"github.com/rakyll/statik/fs"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
+	_ "github.com/twpayne/chezmoi/cmd/statik" // Register statik data.
 	"github.com/twpayne/chezmoi/internal/chezmoi"
 	vfs "github.com/twpayne/go-vfs"
 	xdg "github.com/twpayne/go-xdg/v3"
@@ -104,8 +108,16 @@ var (
 		"URL":  {},
 	}
 
-	templatesBox = packr.New("templates", "../templates")
+	statikFS http.FileSystem
 )
+
+func init() {
+	var err error
+	statikFS, err = fs.New()
+	if err != nil {
+		panic(err)
+	}
+}
 
 // Stderr returns c's stderr.
 func (c *Config) Stderr() io.Writer {
@@ -189,7 +201,7 @@ func (c *Config) autoCommit(vcs VCS) error {
 	if err != nil {
 		return err
 	}
-	commitMessageText, err := templatesBox.Find("COMMIT_MESSAGE.tmpl")
+	commitMessageText, err := fs.ReadFile(statikFS, "/templates/COMMIT_MESSAGE.tmpl")
 	if err != nil {
 		return err
 	}
